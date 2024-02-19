@@ -14,7 +14,7 @@ function generateRecipe(event) {
 
     let instructionInput = document.querySelector("#user-instructions");
     let apiKey = "d48505t8703c543fo79ae4f4d413e7bf";
-    let prompt = `Generate quick and healthy vegetarian recipes about ${instructionInput}`;
+    let prompt = `Generate quick and healthy vegetarian recipes about ${instructionInput.value}`;
     let context = `Create a quick recipe with the ingredient given to you with basic ingredients you 
     can find at home; separate the ingredients and the instructions so it is easy to read`;
 
