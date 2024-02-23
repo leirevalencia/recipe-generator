@@ -20,12 +20,21 @@ header {
     margin-bottom: 30px;
 }
 
-
-form {
+.example {
     padding: 30px;
     background-color: white;
     border-radius: 10px 10px;
+}
+
+form {
     display: flex;
+}
+
+.hint {
+    line-height: 1.5;
+    margin-top: 5px;
+    opacity: 0.3;
+    font-size: 11px;
 }
 
 .instruction {
@@ -55,6 +64,10 @@ form {
     border-left: 3px solid rgb(61, 33, 61);
     border-radius: 5px 5px;
     margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 footer {

@@ -14,11 +14,15 @@ function generateRecipe(event) {
 
     let instructionInput = document.querySelector("#user-instructions");
     let apiKey = "d48505t8703c543fo79ae4f4d413e7bf";
-    let prompt = `Generate quick and healthy vegetarian recipes about ${instructionInput.value}`;
+    let prompt = `Generate quick and healthy vegetarian recipes in spanish about ${instructionInput.value}`;
     let context = `Create a quick recipe with the ingredient given to you with basic ingredients you 
-    can find at home; separate the ingredients and the instructions so it is easy to read`;
+    can find at home. Use HTML tags for formatting text.`;
 
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+    let recipeElement = document.querySelector("#recipe");
+    recipeElement.classList.remove("hidden");
+    recipeElement.innerHTML = `Generating recipe with ${instructionInput.value}`;
 
   console.log("generating recipe");
   console.log(`Prompt: ${prompt}`);
